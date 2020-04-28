@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="ClassBog.cs" />
+    <Compile Include="ClassUdlaan.cs" />
     <Compile Include="ClassNotify.cs" />
     <Compile Include="ClassPerson.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
