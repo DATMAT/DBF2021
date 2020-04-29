@@ -26,6 +26,7 @@ namespace GUI
         ClassLogin CL;
         UserControlLogin UCL;
         UserControlMain UCM;
+
         public MainWindow()
         {
             InitializeComponent();
