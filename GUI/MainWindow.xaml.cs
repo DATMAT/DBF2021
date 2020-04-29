@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BIZ;
+using Repository;
 
 namespace GUI
 {
@@ -20,9 +22,11 @@ namespace GUI
     /// </summary>
     public partial class MainWindow : Window
     {
+        ClassBIZ CB;
         public MainWindow()
         {
             InitializeComponent();
+
         }
     }
 }
