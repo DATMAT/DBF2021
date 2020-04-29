@@ -33,12 +33,12 @@ namespace IO
 
                 cb.id = Convert.ToInt32(row["id"]);
                 cb.isbnNr = row["isbnNr"].ToString();
-                cb.title = row["titel"].ToString();
-                cb.title = row["forfatter"].ToString();
-                cb.title = row["forlagsNavn"].ToString();
-                cb.title = row["genreType"].ToString();
-                cb.title = row["TypeNavn"].ToString();
-                cb.iD = Convert.ToDecimal(row["pris"]);
+                cb.titel = row["titel"].ToString();
+                cb.forfatter = row["forfatter"].ToString();
+                cb.forlag = row["forlagsNavn"].ToString();
+                cb.genre = row["genreType"].ToString();
+                cb.type = row["TypeNavn"].ToString();
+                cb.pris = Convert.ToDecimal(row["pris"]);
 
                 res.Add(cb);
             }
@@ -46,7 +46,7 @@ namespace IO
             return res;
         }
 
-        public ObservableCollection<ClassBog> GetAllBooksLentToUser(string id)
+        public ObservableCollection<ClassBog> GetAllBooksLentToUser(int id)
         {
             ObservableCollection<ClassBog> res = new ObservableCollection<ClassBog>();
 
@@ -71,12 +71,12 @@ namespace IO
 
                 cb.id = Convert.ToInt32(row["id"]);
                 cb.isbnNr = row["isbnNr"].ToString();
-                cb.title = row["titel"].ToString();
-                cb.title = row["forfatter"].ToString();
-                cb.title = row["forlagsNavn"].ToString();
-                cb.title = row["genreType"].ToString();
-                cb.title = row["TypeNavn"].ToString();
-                cb.iD = Convert.ToDecimal(row["pris"]);
+                cb.titel = row["titel"].ToString();
+                cb.forfatter = row["forfatter"].ToString();
+                cb.forlag = row["forlagsNavn"].ToString();
+                cb.genre = row["genreType"].ToString();
+                cb.type = row["TypeNavn"].ToString();
+                cb.pris = Convert.ToDecimal(row["pris"]);
 
                 res.Add(cb);
             }
@@ -89,18 +89,19 @@ namespace IO
         /// </summary>
         /// <param name="id"></param>
         /// <param name="status">true retuneret/false udlånt</param>
-        public void UpdateTheLendingStatus(string bookID, string personId, bool status)
+        public void UpdateTheLendingStatus(int bookID, int personId, bool status)
         {
+            string sqlQuery = "";
             if (status)
             {
-                string sqlQuery = $"UPDATE Udlaan " +
-                                  $"SET udlansStatus = 2 " +
-                                  $"WHERE(bookID = {bookID}) AND (personID = {personId})";
+                 sqlQuery = $"UPDATE Udlaan " +
+                            $"SET udlansStatus = 2 " +
+                            $"WHERE(bookID = {bookID}) AND (personID = {personId})";
             }
             else
             {
-                string sqlQuery = $"INSERT INTO Udlaan (bookID, personID, udlaansDato, udlansStatus) " +
-                                  $"VALUES({bookID} ,{personId} , {DateTime.Today.ToString("YYYY-MM-DD")}, 1)";
+                 sqlQuery = $"INSERT INTO Udlaan (bookID, personID, udlaansDato, udlansStatus) " +
+                            $"VALUES({bookID} ,{personId} , {DateTime.Today.ToString("YYYY-MM-DD")}, 1)";
             }
 
             ExecuteNonQuery(sqlQuery);
@@ -137,7 +138,7 @@ namespace IO
         /// </summary>
         /// <param name="bookID"></param>
         /// <returns>true is not availble/false is availble</returns>
-        public bool GetIsLendOut(string bookID)
+        public bool GetIsLendOut(int bookID)
         {
             int id = 0;
             string sqlQuery = $"SELECT id " +
