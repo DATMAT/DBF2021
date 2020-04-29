@@ -31,8 +31,8 @@ namespace GUI
             InitializeComponent();
             CB = new ClassBIZ();
             CL = new ClassLogin();
-            UCL = new UserControlLogin();
-            UCM = new UserControlMain();
+            UCL = new UserControlLogin(CL);
+            UCM = new UserControlMain(CB);
         }
     }
 }
