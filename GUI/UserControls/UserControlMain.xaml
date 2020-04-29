@@ -1,0 +1,368 @@
+﻿<UserControl x:Class="GUI.UserControlMain"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1200">
+
+    <Grid x:Name="ucMainGrid"
+          Background="WhiteSmoke">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>            
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <ListView
+                x:Name="ListviewLåneBøger"
+                Grid.Column="4"
+                Grid.Row="0"
+                Margin="5"
+                Grid.ColumnSpan="2"
+                Grid.RowSpan="15">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        Header="Lånte Bøger"
+                        Width="300"/>
+                </GridView>
+            </ListView.View>
+                                    
+        </ListView>
+
+        <ListView
+                x:Name="ListviewLånteBøger"            
+                Grid.Column="7"
+                Grid.Row="0"
+                Margin="5"
+                Grid.ColumnSpan="2"
+                Grid.RowSpan="15">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        Header="Låne Bøger"
+                        Width="300"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
+        <ListView
+                x:Name="listveiwBruger"
+                Grid.Column="0"
+                Grid.Row="0"
+                Margin="5"
+                Grid.ColumnSpan="2"
+                Grid.RowSpan="15">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn
+                        Header="Bruger"
+                        Width="300"/>
+                </GridView>
+            </ListView.View>
+
+        </ListView>
+        
+        
+
+        <Label Content="Stamdata:"
+               Grid.Row="0"
+               Grid.Column="2"              
+               Margin="5"
+               FontSize="14"
+               FontWeight="Bold"
+               HorizontalContentAlignment="Center" />
+
+        <Label Content="Fornavn:"
+               Grid.Row="1"
+               Grid.Column="2"
+               Grid.ColumnSpan="2"
+               FontSize="12"
+               Margin="5"
+               VerticalAlignment="Bottom"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="Efternavn:"
+               Grid.Row="3"
+               Grid.Column="2"
+               Grid.ColumnSpan="2"
+               FontSize="12"
+               Margin="5"
+               VerticalAlignment="Bottom"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="Adresse:"
+               Grid.Row="5"
+               Grid.Column="2"
+               Grid.ColumnSpan="2"
+               FontSize="12"
+               Margin="5"
+               VerticalAlignment="Bottom"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="Postnr - By:"
+               Grid.Row="7"
+               Grid.Column="2"
+               Grid.ColumnSpan="2"
+               FontSize="12"
+               Margin="5"
+               VerticalAlignment="Bottom"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="Mail adr:"
+               Grid.Row="9"
+               Grid.Column="2"
+               Grid.ColumnSpan="2"
+               FontSize="12"
+               Margin="5"
+               VerticalAlignment="Bottom"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="Mobil nr:"
+               Grid.Row="11"
+               Grid.Column="2"
+               Grid.ColumnSpan="2"
+               FontSize="12"
+               Margin="5"
+               VerticalAlignment="Bottom"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="boginfo:"
+               Grid.Row="0"
+               Grid.Column="9"              
+               Margin="5"
+               FontSize="14"
+               FontWeight="Bold"
+               HorizontalContentAlignment="Center" />
+
+        <Label Content="Titel:"
+               Grid.Row="1"
+               Grid.Column="9"
+               Grid.ColumnSpan="2"
+               FontSize="12"
+               Margin="5"
+               VerticalAlignment="Bottom"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="Genre:"
+               Grid.Row="3"
+               Grid.Column="9"
+               Grid.ColumnSpan="2"
+               FontSize="12"
+               Margin="5"
+               VerticalAlignment="Bottom"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="Forfatter:"
+               Grid.Row="5"
+               Grid.Column="9"
+               Grid.ColumnSpan="2"
+               FontSize="12"
+               Margin="5"
+               VerticalAlignment="Bottom"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="Forlag:"
+               Grid.Row="7"
+               Grid.Column="9"
+               Grid.ColumnSpan="2"
+               FontSize="12"
+               Margin="5"
+               VerticalAlignment="Bottom"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="ISBNid:"
+               Grid.Row="9"
+               Grid.Column="9"
+               Grid.ColumnSpan="2"
+               FontSize="12"
+               Margin="5"
+               VerticalAlignment="Bottom"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="type:"
+               Grid.Row="11"
+               Grid.Column="9"
+               Grid.ColumnSpan="2"
+               FontSize="12"
+               Margin="5"
+               VerticalAlignment="Bottom"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="pris:"
+               Grid.Row="13"
+               Grid.Column="9"
+               Grid.ColumnSpan="2"
+               FontSize="12"
+               Margin="5"
+               VerticalAlignment="Bottom"
+               HorizontalContentAlignment="Left" />
+
+
+        <Label Content="{Binding selectedUser.fornavn, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+               Grid.Row="2"
+               Grid.Column="2"
+               Grid.ColumnSpan="2"
+               FontSize="14"
+               Margin="5"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="{Binding selectedUser.efternav, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+               Grid.Row="4"
+               Grid.Column="2"
+               Grid.ColumnSpan="2"
+               FontSize="14"
+               Margin="5"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="{Binding selectedUser.adresse, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+               Grid.Row="6"
+               Grid.Column="2"
+               Grid.ColumnSpan="2"
+               FontSize="14"
+               Margin="5"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="{Binding selectedUser.postnr-by, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+               Grid.Row="8"
+               Grid.Column="2"
+               Grid.ColumnSpan="3"
+               FontSize="14"
+               Margin="5"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="{Binding selectedUser.mail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+               Grid.Row="10"
+               Grid.Column="2"
+               Grid.ColumnSpan="32"
+               FontSize="14"
+               Margin="5"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="{Binding selectedUser.telefon, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+               Grid.Row="12"
+               Grid.Column="2"
+               Grid.ColumnSpan="2"
+               FontSize="14"
+               Margin="5"
+               HorizontalContentAlignment="Left" />
+
+
+
+        <Label Content="{Binding selectedBook.titel, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+               Grid.Row="2"
+               Grid.Column="9"
+               Grid.ColumnSpan="2"
+               FontSize="14"
+               Margin="5"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="{Binding selectedBook.genre, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+               Grid.Row="4"
+               Grid.Column="9"
+               Grid.ColumnSpan="2"
+               FontSize="14"
+               Margin="5"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="{Binding selectedBook.Forfatter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+               Grid.Row="6"
+               Grid.Column="9"
+               Grid.ColumnSpan="2"
+               FontSize="14"
+               Margin="5"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="{Binding selectedBook.forlag, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+               Grid.Row="8"
+               Grid.Column="9"
+               Grid.ColumnSpan="3"
+               FontSize="14"
+               Margin="5"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="{Binding selectedBook.ISBNnr, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+               Grid.Row="10"
+               Grid.Column="9"
+               Grid.ColumnSpan="32"
+               FontSize="14"
+               Margin="5"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="{Binding selectedBook.type, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+               Grid.Row="12"
+               Grid.Column="9"
+               Grid.ColumnSpan="2"
+               FontSize="14"
+               Margin="5"
+               HorizontalContentAlignment="Left" />
+
+        <Label Content="{Binding selectedBook.Price, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+               Grid.Row="14"
+               Grid.Column="9"
+               Grid.ColumnSpan="2"
+               FontSize="14"
+               Margin="5"
+               HorizontalContentAlignment="Left" />
+
+        <Button Content="Opret ny"
+                Margin="5"
+                Grid.Column="0"                
+                Grid.Row="15" 
+                Click="Button_Click"/>
+        
+        <Button Content="Rediger"
+                Margin="5"
+                Grid.Column="1"
+                Grid.Row="15" 
+                Click="Button_Click_1"/>       
+
+        <Button Content="Slet"
+                Margin="5"
+                Grid.Column="2"
+                Grid.Row="15" 
+                Click="Button_Click_2"/>
+
+        <Button Content="Lån bog"
+                Margin="5"
+                Grid.Column="8"
+                Grid.Row="15" 
+                Click="Button_Click_4"/>
+
+        <Button Content="Aflever bog"
+                Margin="5"
+                Grid.Column="5"
+                Grid.Row="15" 
+                Click="Button_Click_3"/>
+
+    </Grid>
+</UserControl>

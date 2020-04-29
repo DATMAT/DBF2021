@@ -8,7 +8,7 @@ using Repository;
 
 namespace BIZ
 {
-	public class ClassBIZ
+	public class ClassBIZ: ClassNotify
 	{
 		private ObservableCollection<ClassBog> _boeger;
 		private ObservableCollection<ClassBog> _laanteBoeger;
@@ -72,11 +72,15 @@ namespace BIZ
 		public ObservableCollection<ClassBog> GetAllLentBoks(int inID)
 		{
 			laanteBoeger = GetAllBooksLentToUser(inID);
+
+			return;
 		}
 
 		public ObservableCollection<ClassBog> GetAllBooksWhereTheTitleContainsTheseWords(string SøgTekst)
 		{
 			boeger = GetAllBooksLike(søgTekst);
+
+			return;
 		}
 
 		public void LendThisBookToTheUser(bog.id, person.id)
