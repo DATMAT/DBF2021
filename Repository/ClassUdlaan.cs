@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Repository
 {
-    public class ClassUdlaan : Notify
+    public class ClassUdlaan : ClassNotify
     {
 		private DateTime _afleveringsDato;
 		public ClassUdlaan()

@@ -9,7 +9,7 @@ using IO;
 
 namespace BIZ
 {
-	public class ClassBIZ
+	public class ClassBIZ : ClassNotify
 	{
 		private ObservableCollection<ClassBog> _boeger;
 		private ObservableCollection<ClassBog> _laanteBoeger;
