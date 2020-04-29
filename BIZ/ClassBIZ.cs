@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Repository;
+using IO;
 
 namespace BIZ
 {
@@ -14,10 +15,13 @@ namespace BIZ
 		private ObservableCollection<ClassBog> _laanteBoeger;
 		private ClassBog _bog;
 		private ClassPerson _person;
+		private ClassDbfDB DbfDB;
 
 		public ClassBIZ()
 		{
+			DbfDB = new ClassDbfDB();
 		}
+		
 		
 		public ClassPerson person
 		{
@@ -71,30 +75,32 @@ namespace BIZ
 
 		public ObservableCollection<ClassBog> GetAllLentBoks(int inID)
 		{
-			laanteBoeger = GetAllBooksLentToUser(inID);
+			laanteBoeger = DbfDB.GetAllBooksLentToUser(inID);
+
+			return laanteBoeger;
 		}
 
-		public ObservableCollection<ClassBog> GetAllBooksWhereTheTitleContainsTheseWords(string SøgTekst)
+		public ObservableCollection<ClassBog> GetAllBooksWhereTheTitleContainsTheseWords(string search)
 		{
-			boeger = GetAllBooksLike(søgTekst);
+			boeger = DbfDB.GetAllBooksLike(search);
+
+			return boeger;
 		}
 
-		public void LendThisBookToTheUser(bog.id, person.id)
+		public void LendThisBookToTheUser(int inBog, int inPerson)
 		{
 
+			DbfDB.UpdateTheLendingStatus(inBog, inPerson, false);
+		}
+				
+		public void SubmitThisBookToTheLibrary(int inBog, int inPerson)
+		{
+			DbfDB.UpdateTheLendingStatus(inBog, inPerson, true);
 		}
 
-		public void SubmitThisBookToTheLibrary(bog.id, person.id)
-		{
-			
-		}
-
-		public bool CheckForDoubleLending(bog)
-		{
-
-
-			bool Res = true;
-			return Res;
+		public bool CheckForDoubleLending(int inBog)
+		{			
+			return DbfDB.GetIsLendOut(inBog);
 		}
 
 	}
