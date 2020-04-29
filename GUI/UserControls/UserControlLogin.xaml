@@ -1,0 +1,101 @@
+﻿<UserControl x:Class="GUI.UserControlLogin"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:GUI"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="1200" Background="WhiteSmoke">
+    <Grid x:Name="GridLogin">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1.3*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="1" Grid.Column="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <Label Content="CPR-Nummer:"
+                   FontSize="20"
+                   Margin="20,5"
+                   Grid.ColumnSpan="2"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left"
+                   />
+
+            <TextBox Grid.Row="1"
+                     Grid.ColumnSpan="2"
+                     Margin="20,5"
+                     HorizontalAlignment="Stretch"
+                     VerticalAlignment="Stretch"
+                     Background="LightGray"
+                     FontSize="20"
+                     HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center"
+                     TextWrapping="Wrap"
+                     Text="CPR-Nummer" 
+                     BorderThickness="3"
+                     BorderBrush="Black"
+                     />
+
+            <Label Content="Password:"
+                   FontSize="20"
+                   Margin="20,5"
+                   Grid.ColumnSpan="2"
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Left"
+                   Grid.Row="2"
+                   />
+
+            <TextBox Grid.Row="3"
+                     Grid.ColumnSpan="2"
+                     Margin="20,5"
+                     HorizontalAlignment="Stretch"
+                     VerticalAlignment="Stretch"
+                     Background="LightGray"
+                     FontSize="20"
+                     HorizontalContentAlignment="Center"
+                     VerticalContentAlignment="Center"
+                     TextWrapping="Wrap"
+                     Text="Password" 
+                     BorderThickness="3"
+                     BorderBrush="Black"
+                     />
+
+            <Button Content="Login"
+                    Grid.Row="4"
+                    Grid.Column="1"
+                    Margin="20,15,20,15"
+                    Background="LightGray"
+                    BorderThickness="3"
+                    BorderBrush="Black"/>
+            
+            <Button Content="Cancel"
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Margin="20,15,20,15"
+                    Background="LightGray"
+                    BorderThickness="3"
+                    BorderBrush="Black"/>
+
+        </Grid>
+        
+        
+    </Grid>
+</UserControl>
