@@ -31,8 +31,11 @@ namespace GUI
             InitializeComponent();
             CB = new ClassBIZ();
             CL = new ClassLogin();
-            UCL = new UserControlLogin(CL);
+            UCL = new UserControlLogin(CL,CB, MainFormGrid);
             UCM = new UserControlMain(CB);
+
+            MainFormGrid.Children.Add(UCM);
+            MainFormGrid.Children.Add(UCL);
         }
     }
 }
