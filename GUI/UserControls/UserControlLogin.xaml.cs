@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using BIZ;
 namespace GUI
 {
     /// <summary>
@@ -20,9 +20,12 @@ namespace GUI
     /// </summary>
     public partial class UserControlLogin : UserControl
     {
-        public UserControlLogin()
+        ClassLogin CL;
+        public UserControlLogin(ClassLogin inCL)
         {
             InitializeComponent();
+            CL = inCL;
+            GridLogin.DataContext = CL;
         }
     }
 }

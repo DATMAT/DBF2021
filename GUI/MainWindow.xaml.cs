@@ -23,10 +23,16 @@ namespace GUI
     public partial class MainWindow : Window
     {
         ClassBIZ CB;
+        ClassLogin CL;
+        UserControlLogin UCL;
+        UserControlMain UCM;
         public MainWindow()
         {
             InitializeComponent();
-
+            CB = new ClassBIZ();
+            CL = new ClassLogin();
+            UCL = new UserControlLogin();
+            UCM = new UserControlMain();
         }
     }
 }

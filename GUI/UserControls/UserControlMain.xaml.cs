@@ -24,10 +24,11 @@ namespace GUI
     public partial class UserControlMain : UserControl
     {
         ClassBIZ CB;
-        public UserControlMain()
+        public UserControlMain(ClassBIZ inBIZ)
         {
             InitializeComponent();
-
+            CB = inBIZ;
+            ucMainGrid.DataContext = CB;
         }
 
         //Create new user.
