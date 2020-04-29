@@ -103,7 +103,7 @@ namespace IO
                                   $"VALUES({bookID} ,{personId} , {DateTime.Today.ToString("YYYY-MM-DD")}, 1)";
             }
 
-            FunctionExecuteNonQuery(sqlQuery);
+            ExecuteNonQuery(sqlQuery);
         }
 
         public ClassPerson GetUser(string userID, string password)
