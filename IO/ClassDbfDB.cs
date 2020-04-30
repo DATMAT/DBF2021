@@ -123,11 +123,11 @@ namespace IO
             foreach (DataRow row in dt.Rows)
             {
                 res.id = Convert.ToInt32(row["id"]);
-                res.navn = row["titel"].ToString();
-                res.adresse = row["titel"].ToString();
-                res.telefon = row["titel"].ToString();
-                res.mail = row["titel"].ToString();
-                res.rolle = Convert.ToInt32(row["id"]);
+                res.navn = row["naven"].ToString();
+                res.adresse = row["adresse"].ToString();
+                res.telefon = row["telefonnummer"].ToString();
+                res.mail = row["mailAdr"].ToString();
+                res.rolle = Convert.ToInt32(row["rolle"]);
             }
 
             return res;

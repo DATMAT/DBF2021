@@ -16,7 +16,7 @@ namespace IO
 
         public ClassDB()
         {
-            connectionString = @"Server=CV-BB-5324\SQLEXPRESS;Database=FilmDB;Trusted_Connection=True;";
+            connectionString = @"Server=CVDB3,1455;Database=DanskBibliotekForening;Trusted_Connection=True;";
             con = new SqlConnection(connectionString);
         }
         public ClassDB (string inConnectionString)

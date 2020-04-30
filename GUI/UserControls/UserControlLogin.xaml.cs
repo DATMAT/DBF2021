@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using BIZ;
+using Repository;
+
 namespace GUI
 {
     /// <summary>
@@ -21,11 +23,27 @@ namespace GUI
     public partial class UserControlLogin : UserControl
     {
         ClassLogin CL;
-        public UserControlLogin(ClassLogin inCL)
+        ClassBIZ CB;
+        Grid inGrid;
+        public UserControlLogin(ClassLogin inCL, ClassBIZ inBIZ, Grid tGrid)
         {
             InitializeComponent();
             CL = inCL;
+            CB = inBIZ;
             GridLogin.DataContext = CL;
+            inGrid = tGrid;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ClassPerson logPerson = CL.GetUserData();
+
+            if (logPerson.id > 0 && logPerson != null)
+            {
+                CB.person = logPerson;
+
+                inGrid.Children.Remove(this);
+            }
         }
     }
 }

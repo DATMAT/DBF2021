@@ -81,7 +81,7 @@
                 Grid.Row="0"
                 Margin="5"
                 Grid.ColumnSpan="2"
-                Grid.RowSpan="15">
+                Grid.RowSpan="15" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn
