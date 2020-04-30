@@ -46,10 +46,10 @@ namespace BIZ
 	
 			}
 		}
-		public ClassPerson GetUserData(string inID, string inUser)
+		public ClassPerson GetUserData()
 		{
 			ClassDbfDB db = new ClassDbfDB();
-			ClassPerson res = db.GetUser(inID, inUser);
+			ClassPerson res = db.GetUser(user, id);
 			return res;
 		}
 	}

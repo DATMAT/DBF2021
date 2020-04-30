@@ -49,7 +49,7 @@
                      HorizontalContentAlignment="Center"
                      VerticalContentAlignment="Center"
                      TextWrapping="Wrap"
-                     Text="CPR-Nummer" 
+                     Text="{Binding user, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
                      BorderThickness="3"
                      BorderBrush="Black"
                      />
@@ -73,7 +73,7 @@
                      HorizontalContentAlignment="Center"
                      VerticalContentAlignment="Center"
                      TextWrapping="Wrap"
-                     Text="Password" 
+                     Text="{Binding id, Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
                      BorderThickness="3"
                      BorderBrush="Black"
                      />
@@ -84,7 +84,8 @@
                     Margin="20,15,20,15"
                     Background="LightGray"
                     BorderThickness="3"
-                    BorderBrush="Black"/>
+                    BorderBrush="Black"
+                    Click="Button_Click" />
             
             <Button Content="Cancel"
                     Grid.Row="4"
