@@ -48,11 +48,14 @@
                 Grid.Row="0"
                 Margin="5"
                 Grid.ColumnSpan="2"
+                  ItemsSource="{Binding laanteBoeger}"
+                  SelectedItem="{Binding bog}"
                 Grid.RowSpan="15">
             <ListView.View>
                 <GridView>
                     <GridViewColumn
                         Header="Lånte Bøger"
+                                    DisplayMemberBinding="{Binding titel}"
                         Width="300"/>
                 </GridView>
             </ListView.View>
@@ -65,32 +68,20 @@
                 Grid.Row="0"
                 Margin="5"
                 Grid.ColumnSpan="2"
+                ItemsSource="{Binding boeger }"
+                SelectedItem="{Binding bog}"
                 Grid.RowSpan="15">
             <ListView.View>
                 <GridView>
                     <GridViewColumn
                         Header="Låne Bøger"
-                        Width="300"/>
+                                    DisplayMemberBinding="{Binding titel}"
+                                    Width="300"/>
                 </GridView>
             </ListView.View>
         </ListView>
 
-        <ListView
-                x:Name="listveiwBruger"
-                Grid.Column="0"
-                Grid.Row="0"
-                Margin="5"
-                Grid.ColumnSpan="2"
-                Grid.RowSpan="15" >
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn
-                        Header="Bruger"
-                        Width="300"/>
-                </GridView>
-            </ListView.View>
-
-        </ListView>
+       
         
         
 
@@ -104,15 +95,6 @@
 
         <Label Content="Fornavn:"
                Grid.Row="1"
-               Grid.Column="2"
-               Grid.ColumnSpan="2"
-               FontSize="12"
-               Margin="5"
-               VerticalAlignment="Bottom"
-               HorizontalContentAlignment="Left" />
-
-        <Label Content="Efternavn:"
-               Grid.Row="3"
                Grid.Column="2"
                Grid.ColumnSpan="2"
                FontSize="12"
@@ -228,7 +210,7 @@
                HorizontalContentAlignment="Left" />
 
 
-        <Label Content="{Binding selectedUser.fornavn, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        <Label Content="{Binding person.navn}"
                Grid.Row="2"
                Grid.Column="2"
                Grid.ColumnSpan="2"
@@ -236,15 +218,7 @@
                Margin="5"
                HorizontalContentAlignment="Left" />
 
-        <Label Content="{Binding selectedUser.efternav, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-               Grid.Row="4"
-               Grid.Column="2"
-               Grid.ColumnSpan="2"
-               FontSize="14"
-               Margin="5"
-               HorizontalContentAlignment="Left" />
-
-        <Label Content="{Binding selectedUser.adresse, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        <Label Content="{Binding person.adresse}"
                Grid.Row="6"
                Grid.Column="2"
                Grid.ColumnSpan="2"
@@ -252,7 +226,7 @@
                Margin="5"
                HorizontalContentAlignment="Left" />
 
-        <Label Content="{Binding selectedUser.postnr-by, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        <Label Content="{Binding person.postnr-by}"
                Grid.Row="8"
                Grid.Column="2"
                Grid.ColumnSpan="3"
@@ -260,7 +234,7 @@
                Margin="5"
                HorizontalContentAlignment="Left" />
 
-        <Label Content="{Binding selectedUser.mail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        <Label Content="{Binding person.mail}"
                Grid.Row="10"
                Grid.Column="2"
                Grid.ColumnSpan="32"
@@ -268,7 +242,7 @@
                Margin="5"
                HorizontalContentAlignment="Left" />
 
-        <Label Content="{Binding selectedUser.telefon, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        <Label Content="{Binding person.telefon}"
                Grid.Row="12"
                Grid.Column="2"
                Grid.ColumnSpan="2"
@@ -278,7 +252,7 @@
 
 
 
-        <Label Content="{Binding selectedBook.titel, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        <Label Content="{Binding bog.titel}"
                Grid.Row="2"
                Grid.Column="9"
                Grid.ColumnSpan="2"
@@ -286,7 +260,7 @@
                Margin="5"
                HorizontalContentAlignment="Left" />
 
-        <Label Content="{Binding selectedBook.genre, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        <Label Content="{Binding bog.genre}"
                Grid.Row="4"
                Grid.Column="9"
                Grid.ColumnSpan="2"
@@ -294,7 +268,7 @@
                Margin="5"
                HorizontalContentAlignment="Left" />
 
-        <Label Content="{Binding selectedBook.Forfatter, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        <Label Content="{Binding bog.Forfatter}"
                Grid.Row="6"
                Grid.Column="9"
                Grid.ColumnSpan="2"
@@ -302,7 +276,7 @@
                Margin="5"
                HorizontalContentAlignment="Left" />
 
-        <Label Content="{Binding selectedBook.forlag, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        <Label Content="{Binding bog.forlag}"
                Grid.Row="8"
                Grid.Column="9"
                Grid.ColumnSpan="3"
@@ -310,7 +284,7 @@
                Margin="5"
                HorizontalContentAlignment="Left" />
 
-        <Label Content="{Binding selectedBook.ISBNnr, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        <Label Content="{Binding bog.ISBNnr}"
                Grid.Row="10"
                Grid.Column="9"
                Grid.ColumnSpan="32"
@@ -318,7 +292,7 @@
                Margin="5"
                HorizontalContentAlignment="Left" />
 
-        <Label Content="{Binding selectedBook.type, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        <Label Content="{Binding bog.type}"
                Grid.Row="12"
                Grid.Column="9"
                Grid.ColumnSpan="2"
@@ -326,7 +300,7 @@
                Margin="5"
                HorizontalContentAlignment="Left" />
 
-        <Label Content="{Binding selectedBook.Price, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+        <Label Content="{Binding bog.Price}"
                Grid.Row="14"
                Grid.Column="9"
                Grid.ColumnSpan="2"
